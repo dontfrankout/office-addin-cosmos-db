@@ -23,7 +23,7 @@ module.exports = async (env, options)  => {
     polyfill: 'babel-polyfill',
     taskpane: [
       'react-hot-loader/patch',
-      './src/taskpane/index.js',
+      './src/taskpane/taskpane.js',
     ],
     commands: './src/commands/commands.js'
     },
@@ -75,7 +75,7 @@ module.exports = async (env, options)  => {
       ]}),
       new ExtractTextPlugin('[name].[hash].css'),
       new HtmlWebpackPlugin({
-        filename: "taskpane.html",
+        filename: "index.html",
           template: './src/taskpane/taskpane.html',
           chunks: ['taskpane', 'vendor', 'polyfill']
       }),
