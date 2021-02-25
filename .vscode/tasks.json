@@ -34,7 +34,7 @@
       "script": "start:desktop -- --app excel",
       "presentation": {
         "clear": true,
-        "panel": "dedicated",
+        "panel": "dedicated"
       },
       "problemMatcher": []
     },
@@ -44,7 +44,7 @@
       "script": "start:desktop -- --app powerpoint",
       "presentation": {
         "clear": true,
-        "panel": "dedicated",
+        "panel": "dedicated"
       },
       "problemMatcher": []
     },
@@ -54,7 +54,7 @@
       "script": "start:desktop -- --app word",
       "presentation": {
         "clear": true,
-        "panel": "dedicated",
+        "panel": "dedicated"
       },
       "problemMatcher": []
     },
@@ -130,5 +130,32 @@
       },
       "problemMatcher": []
     },
+    {
+      "type": "func",
+      "command": "host start",
+      "problemMatcher": "$func-node-watch",
+      "isBackground": true,
+      "dependsOn": "npm install",
+      "options": {
+        "cwd": "${workspaceFolder}/Functions"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "npm install",
+      "command": "npm install",
+      "options": {
+        "cwd": "${workspaceFolder}/Functions"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "npm prune",
+      "command": "npm prune --production",
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceFolder}/Functions"
+      }
+    }
   ]
 }

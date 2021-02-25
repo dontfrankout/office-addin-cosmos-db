@@ -22,11 +22,14 @@
     "start": "office-addin-debugging start manifest.xml",
     "start:desktop": "office-addin-debugging start manifest.xml desktop",
     "start:web": "office-addin-debugging start manifest.xml web",
+    "sideload:dev": "office-addin-debugging start manifest-dev.xml",
     "stop": "office-addin-debugging stop manifest.xml",
     "validate": "office-addin-manifest validate manifest.xml",
     "watch": "webpack --mode development --watch"
   },
   "dependencies": {
+    "@azure/msal-browser": "^2.11.2",
+    "@azure/msal-react": "^1.0.0-alpha.6",
     "core-js": "^3.1.4",
     "es6-promise": "^4.2.8",
     "office-ui-fabric-react": "^7.10.0",
